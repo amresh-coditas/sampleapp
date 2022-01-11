@@ -23,14 +23,14 @@ pipeline {
 
       stage('yarn install') {
           steps{
-              sh 'yarn install'
+              sh 'echo "Please enter build command here"'
           }
       }
 
       stage('Deploy to DEV') {
           when { branch 'test' }
           steps {
-              sh 'STAGE=dev'
+              sh 'echo "deployment steps specific with branch"'
 
           }
       }
